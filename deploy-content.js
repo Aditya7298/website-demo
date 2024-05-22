@@ -1,6 +1,7 @@
 const S3 = require("aws-sdk/clients/s3");
 
 const generateHTMl = () => {
+  const date = new Date();
   return `
     <!DOCTYPE html>
     <html lang="en">
@@ -10,7 +11,7 @@ const generateHTMl = () => {
         <title>Sprinklr Demo</title>
       </head>
       <body>
-        <p>Hi this is Aditya. This webpage was last built on ${new Date.toString()}</p>
+        <p>Hi this is Aditya. This webpage was last built on ${date.toString()}</p>
       </body>
     </html>
     `;
