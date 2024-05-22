@@ -1,7 +1,7 @@
-import { STS } from "aws-sdk";
-import { config } from "dotenv-flow";
+const { STS } = require("aws-sdk");
+const { config } = require("dotenv-flow");
 
-export const generateTemporaryCreds = async () => {
+const generateTemporaryCreds = async () => {
   console.log("Generating temporary AWS creds for cross account access...");
 
   const { parsed } = config();
@@ -48,3 +48,5 @@ export const generateTemporaryCreds = async () => {
     );
   });
 };
+
+module.exports = { generateTemporaryCreds };

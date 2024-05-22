@@ -1,7 +1,7 @@
-import CloudFront from "aws-sdk/clients/cloudfront";
-import { config } from "dotenv-flow";
+const CloudFront = require("aws-sdk/clients/cloudfront");
+const { config } = require("dotenv-flow");
 
-export const invalidateCache = async () => {
+const invalidateCache = async () => {
   const { parsed } = config();
 
   const cloudFront = new CloudFront({
@@ -35,3 +35,5 @@ export const invalidateCache = async () => {
     );
   });
 };
+
+module.exports = { invalidateCache };

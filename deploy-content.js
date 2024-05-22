@@ -1,4 +1,4 @@
-import S3 from "aws-sdk/clients/s3";
+const S3 = require("aws-sdk/clients/s3");
 
 const generateHTMl = () => {
   return `
@@ -16,7 +16,7 @@ const generateHTMl = () => {
     `;
 };
 
-export const uploadToAWS = async () => {
+const uploadToAWS = async () => {
   try {
     const bucketName = process.env.BUCKET_NAME;
     if (!bucketName) {
@@ -55,3 +55,5 @@ export const uploadToAWS = async () => {
     process.exit(1);
   }
 };
+
+module.exports = { uploadToAWS };

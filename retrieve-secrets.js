@@ -1,7 +1,7 @@
-import { config } from "dotenv-flow";
-import SecretsManager from "aws-sdk/clients/secretsmanager";
+const { config } = require("dotenv-flow");
+const SecretsManager = require("aws-sdk/clients/secretsmanager");
 
-export const retrieveSecrets = async () => {
+const retrieveSecrets = async () => {
   console.log("Retrieving secrets...");
 
   const { parsed } = config();
@@ -47,3 +47,5 @@ export const retrieveSecrets = async () => {
     });
   });
 };
+
+module.exports = { retrieveSecrets };
