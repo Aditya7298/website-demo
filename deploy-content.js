@@ -10,7 +10,7 @@ const generateHTMl = () => {
         <title>Sprinklr Demo</title>
       </head>
       <body>
-        <p>Hi this is Aditya. This webpage was last built on ${Date.toString()}</p>
+        <p>Hi this is Aditya. This webpage was last built on ${new Date.toString()}</p>
       </body>
     </html>
     `;
