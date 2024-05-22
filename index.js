@@ -1,7 +1,7 @@
-import { generateTemporaryCreds } from "./generate-creds";
-import { retrieveSecrets } from "./retrieve-secrets";
-import { uploadToAWS } from "./deploy-content";
-import { invalidateCache } from "./invalidate-cache";
+import { generateTemporaryCreds } from "./generate-creds.js";
+import { retrieveSecrets } from "./retrieve-secrets.js";
+import { uploadToAWS } from "./deploy-content.js";
+import { invalidateCache } from "./invalidate-cache.js";
 
 export const main = async () => {
   await generateTemporaryCreds();
