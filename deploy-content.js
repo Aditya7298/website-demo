@@ -43,7 +43,7 @@ const uploadToAWS = async () => {
         Body: generateHTMl(),
         CacheControl: "public, max-age=0, must-revalidate",
         ContentType: "text/html",
-        ACL: "public-read",
+        // ACL: "public-read",
       },
     });
 
